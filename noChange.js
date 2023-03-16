@@ -2,7 +2,7 @@
 
 // Handle Timer
 const quizTimer = (dismiss) => {
-  //The quizTimer function manages the countdown timer for the quiz and updates the timer display in the HTML.
+
   if (dismiss) {
     clearInterval(timer);
     return;
@@ -32,7 +32,6 @@ const quizTimer = (dismiss) => {
 
 // display quiz options
 const displayQuizOptions = (quiz, i) => {
-  //The DisplayKeyOptions function generates the values for the quiz options and the DisplayKeyOptions function is called for each cost.
   let serial = 1;
   let generatedOptions = "";
   for (let option of quiz) {
@@ -49,7 +48,6 @@ const displayQuizOptions = (quiz, i) => {
 
 // select or choose quiz
 const chooseQuiz = (index, givenAns) => {
-  //The chooseQuiz function stores the user's selected answer for a question and updates the display to show the selected answer.
   const isExist = answers.find((ans) => ans.id === quizData[index].id);
   if (isExist) {
     let serial = 0;
@@ -67,7 +65,6 @@ const chooseQuiz = (index, givenAns) => {
 };
 
 const displayAnswers = (data) => {
-  //The displayAnswer function updates the display to display the user's selected answer for each question.
   // এই পুরো ফাইলে কেও কোন কিছু পরিবর্তন করবেন না । এইখানে কোন Bug নেই ।
   answersContainer.innerHTML = "";
   data = data.sort((a, b) => a.id - b.id);
@@ -111,7 +108,6 @@ const displayAnswers = (data) => {
 // এই পুরো ফাইলে কেও কোন কিছু পরিবর্তন করবেন না । এইখানে কোন Bug নেই ।
 
 const showAnswers = (data) => {
-  //The showAnswers function is called after the quiz is completed and displays the correct answers and explanations for each question.
   // এই পুরো ফাইলে কেও কোন কিছু পরিবর্তন করবেন না । এইখানে কোন Bug নেই ।
   const quizContainer = document.querySelector("#quizContainer");
   quizContainer.innerHTML = "";
